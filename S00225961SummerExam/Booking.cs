@@ -21,6 +21,11 @@ namespace S00225961SummerExam
         public string ImageName { get; set; }
         public string Description { get; set; }
         public string Cast { get; set; }
+
+        public override string ToString()
+        {
+            return Title + " " + Cast;
+        }
     }
 
     public class MovieData : DbContext
@@ -29,4 +34,5 @@ namespace S00225961SummerExam
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Booking> Bookings { get; set; }
     }
+
 }
